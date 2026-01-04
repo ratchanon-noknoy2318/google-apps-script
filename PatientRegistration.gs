@@ -2,7 +2,7 @@
 const scriptProperties = PropertiesService.getScriptProperties();
 
 // แทนที่ YOUR_SPREADSHEET_ID และ SHEET_NAME ด้วยข้อมูลของคุณ
-var SPREADSHEET_ID = scriptProperties.getProperty('SPERADSHEET_ID');
+var SPREADSHEET_ID = scriptProperties.getProperty('SPREADSHEET_ID');
 var SHEET_NAME = scriptProperties.getProperty('SHEET_NAME');; 
 // ================================================================
 //  ฟังก์ชันสำหรับจัดการ GET requests (เช่น การดึงข้อมูล Dashboard)
