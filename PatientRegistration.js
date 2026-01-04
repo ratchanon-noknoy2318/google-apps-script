@@ -1,22 +1,9 @@
-// ================================================================
-//  Google Apps Script - Patient Registration & Dashboard API
-//  SPREADSHEET_ID และ SHEET_NAME ไม่ถูก hardcode
-// ================================================================
+// เรียก Script Properties ก่อน
+const scriptProperties = PropertiesService.getScriptProperties();
 
-// ================================================================
-//  ตั้งค่า SPREADSHEET_ID และ SHEET_NAME ครั้งแรกผ่าน PropertiesService
-// ================================================================
-
-function setConfig(spreadsheetId, sheetName) {
-  if (!spreadsheetId || !sheetName) {
-    throw new Error('Please provide both spreadsheetId and sheetName.');
-  }
-  const scriptProperties = PropertiesService.getScriptProperties();
-  scriptProperties.setProperty('SPREADSHEET_ID', spreadsheetId);
-  scriptProperties.setProperty('SHEET_NAME', sheetName);
-  Logger.log('Configuration saved successfully.');
-}
-
+// แทนที่ YOUR_SPREADSHEET_ID และ SHEET_NAME ด้วยข้อมูลของคุณ
+var SPREADSHEET_ID = scriptProperties.getProperty('SPERADSHEET_ID');
+var SHEET_NAME = scriptProperties.getProperty('SHEET_NAME');; 
 // ================================================================
 //  ฟังก์ชันสำหรับจัดการ GET requests (เช่น การดึงข้อมูล Dashboard)
 // ================================================================
