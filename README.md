@@ -10,8 +10,8 @@ The project contains the following scripts in the `gs/` directory:
 
 | File | Description | Key Function |
 | :--- | :--- | :--- |
-| **`gs/lineappointmentreminder.gs`** | Main function for checking appointments and sending notifications via LINE | - |
-| **`gs/patientregistration.gs`** | Updates data in Google Sheets. | `sendEmail()` |
+| **`gs/lineappointmentreminder.gs`** | Main function for checking appointments and sending notifications via LINE | `sendLineReminders` |
+| **`gs/patientregistration.gs`** | Updates data in Google Sheets. | `updateSheet()` |
 | **`gs/promotionregistration.gs`** | Updates data in Google Sheets. | `updateSheet()` |
 
 
@@ -23,17 +23,7 @@ The project contains the following scripts in the `gs/` directory:
 2. Copy the files from `gs/` into your project.
 3. Save and authorize permissions.
 
----
 
-## Usage Examples
-
-```javascript
-// Send Email
-GmailApp.sendEmail("recipient@example.com", "Subject", "Body");
-
-// Update Sheet
-SpreadsheetApp.getActiveSpreadsheet().getActiveSheet().getRange("A1").setValue("Updated");
-```
 
 ---
 
